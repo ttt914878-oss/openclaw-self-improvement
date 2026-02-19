@@ -5,8 +5,9 @@
   - 進捗: 2/2（`2026-02-19-17-44-55-research-improvement-kpi-increment.md`, `2026-02-19-17-48-55-research-mode-fallback-webfetch.md`）
   - 完了条件: 出典URL付きreport 2件
   - 期待効果: 外部知見KPIを19/20まで前進
-- [ ] P2: 有効施策1件を自己適用（運用ルールへ反映）
+- [x] P2: 有効施策1件を自己適用（運用ルールへ反映）
   - 完了条件: コアMD更新 + report + commit
+  - 実績: `2026-02-19-17-53-55-research-worker-failure-recovery-standard.md` で適用完了
   - 期待効果: 施策の実運用転換率を維持
 - [ ] P3: 委譲率改善（軽タスクの80%以上をgemini-cli-workerへ委譲）
   - 完了条件: 15分レビューで委譲率を記録
