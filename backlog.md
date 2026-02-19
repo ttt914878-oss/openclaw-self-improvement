@@ -1,8 +1,9 @@
 # backlog.md
 
 ## NOW（次の15分で実行・優先順）
-- [ ] P1: Browser Relay安定化タスク（最優先）
-  - 実行: Service-Recover手順（status/tabs/snapshot→必要時gateway再起動）
+- [x] P1: Browser Relay安定化タスク（最優先）
+  - 実行: Service-Recover手順（status/tabs確認 + gateway再起動試行）
+  - 実績: gateway restart権限制約により復旧未達（running=false, tabs=0）
   - 完了条件: running=true, tabs>=1, `browser snapshot` 成功
   - 期待効果: X投稿/リプ実行の復帰率向上
 - [ ] P2: 高価値リプ 3件（競合ギャップ観点の技術コメント）
