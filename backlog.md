@@ -1,20 +1,18 @@
 # backlog.md
 
 ## NOW（次の15分で実行・優先順）
-- [x] P1: Browser Relay安定化タスク（最優先）
-  - 実行: gateway再起動後の復帰確認（status/tabs/snapshot）
-  - 実績: tabs=0（Chrome拡張attach待ち）を確認し記録
-  - 完了条件: 3連続で `browser snapshot` 成功 + 記録1件
+- [ ] P1: Browser Relay安定化タスク（最優先）
+  - 実行: Chrome拡張でXタブattach確認 → status/tabs/snapshot再検証
+  - 完了条件: tabs>=1 かつ `browser snapshot` 成功
   - 期待効果: X投稿/リプ実行の復帰率向上
 - [ ] P2: X投稿 1本を実行（Audience-Fit Hook + Soft-CTA + 返信誘導の問い）
   - 完了条件: 投稿URL取得
-  - 前提: Chrome拡張でXタブattach完了
+  - 前提: P1完了（attach確認）
   - 実行準備: 下書き作成済み（`reports/2026/02/19/2026-02-19-16-03-40-now-draft-queue-for-relay-block.md`）
-  - 現在状態: tabs=0のため保留（attach待ち）
   - 期待効果: プロフィール訪問増（X100に直結）
 - [ ] P3: 高価値リプ 3件（競合ギャップ観点の技術コメント）
   - 完了条件: 返信URL 3件
-  - 現在状態: tabs=0のため保留（attach待ち）
+  - 前提: P1完了（attach確認）
   - 期待効果: 露出増とReply→Follow比改善
 
 ## NEXT（次サイクル候補）
