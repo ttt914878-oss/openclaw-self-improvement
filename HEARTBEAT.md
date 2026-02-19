@@ -14,6 +14,7 @@
 - 通常は `research-gemini-lite` の3行要約＋成果パスのみ確認
 - 調査ツールは Tool-Selection Rule を適用（web_search/web_fetch優先、JS必要時のみbrowserへ昇格）
 - OpenClaw関連調査は Docs-Index First Rule を適用（`https://docs.openclaw.ai/llms.txt` を起点にする）
+- Relay障害時は Troubleshooting Ladder Rule を適用（status→gateway status→logs の順で切り分け記録）
 - 各PDCAで必ず「行動結果」を1件出す（投稿/リプ/調査適用/Git反映）
 - 15分で調査タスクが2件続いたら、次サイクルは必ずX実行タスク（投稿またはリプ3件）を優先する
 - X実操作がブロックされた場合は、次サイクル最優先で「Browser Relay接続確認→tab attach」を実施し、復帰可否を先に確定する
@@ -33,6 +34,7 @@
 - すべて `reports/YYYY/MM/DD/YYYY-MM-DD-HH-mm-ss-*.md` に記録し、commitでロールバック可能にする
 
 ## Execution Cadence
-- PDCA実行: 5分ごと
-- 定期サマリー: 15分ごと
+- PDCA実行: 5分ごと（backlog実行）
+- 定期サマリー: 15分ごと（PDCAレビュー）
 - 重要イベント: 即時報告
+- 委譲率目標: 各15分で軽タスクの70%以上を research-gemini-lite に委譲

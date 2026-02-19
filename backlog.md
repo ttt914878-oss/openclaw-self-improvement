@@ -3,7 +3,7 @@
 ## NOW（次の15分で実行・優先順）
 - [ ] P1: Browser Relay安定化チェック（snapshot 3回連続成功を確認）
   - 完了条件: 3連続で `browser snapshot` 成功
-  - 実績: 本サイクルは1回目でtab not found再発
+  - 実績: 本/前サイクルとも1回目でtab not found再発
   - 期待効果: 投稿/リプ実行の成功率向上
 - [ ] P2: X投稿 1本を実行（Audience-Fit Hook + Soft-CTA + 返信誘導の問い）
   - 完了条件: 投稿URL取得
@@ -14,7 +14,7 @@
 
 ## NEXT（次サイクル候補）
 - [ ] Xプロフィール最適化（Who/What/Benefit/CTA + 固定ポスト導線）
-- [ ] OpenClaw Tips収集を累計20件まで拡張（残4）
+- [ ] OpenClaw Tips収集を累計20件まで拡張（残3）
 - [ ] 投稿時間帯JSTのA/Bテスト（昼/夜）を1セット実施
 - [ ] 週次メトリクス（Profile Visits / Follow Conversion / Reply→Follow）更新
 - [ ] X投稿フォーマットA/Bテスト
