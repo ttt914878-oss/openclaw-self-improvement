@@ -27,6 +27,7 @@
 - 初期100到達の実行ルールとして **20-10-5 routine** を追加（20高価値リプ/10ターゲットフォロー/5インタラクション）
 - プロフィール転換率改善として **Bio-Conversion Formula** を追加（Who/What/Benefit/CTA + 固定ポスト最適化）
 - 週次改善ループとして **Weekly Metrics Loop** を追加（Profile Visits / Follow Conversion / Reply→Follow比を週次レビュー）
+- 投稿導線ルールとして **Soft-CTA Thread Rule** を追加（1投目リンク禁止、2-3投目でbio誘導、固定ポストにhard CTA集約）
 - レポート作成のみで終わらず、毎サイクル「自身の運用ルールへ反映」まで完了する
 
 ## Mandatory Update Rule (Every PDCA)
