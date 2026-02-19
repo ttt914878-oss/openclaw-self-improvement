@@ -17,6 +17,7 @@
 - 15分で調査タスクが2件続いたら、次サイクルは必ずX実行タスク（投稿またはリプ3件）を優先する
 - X実操作がブロックされた場合は、次サイクル最優先で「Browser Relay接続確認→tab attach」を実施し、復帰可否を先に確定する
 - status/tabs正常でもsnapshotがtab not foundなら、gateway再起動が必要なブロッカーとして即記録する
+- 同ブロッカーが2サイクル継続した場合は、次サイクルでgateway再起動を最優先実行する
 - research-gemini-lite が429失敗時は同サイクル内で web_fetch に即フォールバックし、成果ゼロを回避する
 - レポートのみで終了しない。必ず運用へ自己適用する
 - X運用は Platform-Native Engagement Rule を適用（会話誘発優先・各投稿に返信誘導の問いを1つ入れる）
