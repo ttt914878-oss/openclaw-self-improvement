@@ -22,6 +22,7 @@
 - 同ブロッカーが2サイクル継続した場合は、次サイクルでgateway再起動を最優先実行する
 - Browser Relayの間欠不良時は Intermittent Relay Guard を適用（snapshot成功直後に実操作、失敗時は即時記録して再試行）
 - Compose送信が不安定な場合は Single-Shot Submit Rule を適用（snapshot直後1回クリック、失敗時はモーダル再オープン）
+- Single-Shot Submitが2回連続失敗した場合は、同サイクルでリプ3件実行へ切替えてX実行KPIの未達連鎖を止める
 - gateway再起動後にtabs=0の場合は Relay Reattach Rule を適用（拡張アイコンONでattachを最優先）
 - tabs=0の間は Attach-Gate Rule を適用（投稿/リプを保留し、attach確認を最優先）
 - Attach未完了が2サイクル続く場合は、次サイクル冒頭で「Chrome拡張アイコンONでXタブattachを依頼」を明示して復旧を促す

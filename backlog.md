@@ -1,17 +1,15 @@
 # backlog.md
 
 ## NOW（次の15分で実行・優先順）
-- [x] P1: Browser Relay安定化タスク（最優先）
-  - 実行: status/tabs/snapshot再確認
-  - 実績: running=true, tabs=1, snapshot成功（ただしPostクリックで間欠エラー）
+- [ ] P1: Browser Relay安定化タスク（最優先）
+  - 実行: status/tabs/snapshot再確認→Composeモーダル表示確認
   - 完了条件: tabs>=1 かつ `browser snapshot` 成功
   - 期待効果: X投稿/リプ実行の復帰率向上
-- [ ] P2: X投稿 1本を実行（Audience-Fit Hook + Soft-CTA + 返信誘導の問い）
+- [ ] P2: X投稿 1本を実行（Single-Shot Submit Rule）
+  - 実行: Audience-Fit Hook + Soft-CTA + 返信誘導の問いを投入し、snapshot直後に送信1回のみ
   - 完了条件: 投稿URL取得
   - 前提: P1完了（attach確認）
-  - 実行準備: 下書き作成済み（`reports/2026/02/19/2026-02-19-16-03-40-now-draft-queue-for-relay-block.md`）
-  - 現在状態: status/tabs/snapshotは成功、Postクリックで間欠エラー継続
-  - 期待効果: プロフィール訪問増（X100に直結）
+  - 期待効果: Postクリック間欠エラー回避と投稿完了率改善
 - [ ] P3: 高価値リプ 3件（競合ギャップ観点の技術コメント）
   - 完了条件: 返信URL 3件
   - 前提: P1完了（attach確認）
