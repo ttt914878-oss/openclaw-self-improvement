@@ -1,23 +1,20 @@
 # backlog.md
 
 ## NOW（次の15分で実行・優先順）
-- [x] P1: Browser Relay安定化タスク（最優先）
+- [ ] P1: Browser Relay安定化タスク（最優先）
   - 実行: status/tabs/snapshot再確認
-  - 実績: running=true, tabs=1, snapshot成功（復帰確認）
-  - 完了条件: tabs>=1 かつ `browser snapshot` 成功
+  - 完了条件: running=true, tabs>=1, `browser snapshot` 成功
   - 期待効果: X投稿/リプ実行の復帰率向上
-- [ ] P2: X投稿 1本を実行（Single-Shot Submit Rule）
-  - 実行: Audience-Fit Hook + Soft-CTA + 返信誘導の問いを投入し、snapshot直後に送信1回のみ
-  - 完了条件: 投稿URL取得
-  - 前提: P1完了（attach確認）
-  - 現在状態: browser control serviceエラーで送信失敗（Postクリック失敗）
-  - 期待効果: Postクリック間欠エラー回避と投稿完了率改善
-- [ ] P3: 高価値リプ 3件（競合ギャップ観点の技術コメント）
+- [ ] P2: 高価値リプ 3件（競合ギャップ観点の技術コメント）
   - 完了条件: 返信URL 3件
   - 前提: P1完了（attach確認）
-  - 実行条件: P2送信失敗が2回連続したら即P3へ切替
-  - 現在状態: 切替条件を満たしたため次サイクル最優先
-  - 期待効果: 露出増とReply→Follow比改善
+  - 実行理由: P2投稿送信が2回連続失敗したため優先切替
+  - 期待効果: 露出増とReply→Follow比改善（X実行KPIを先に回復）
+- [ ] P3: X投稿 1本を実行（Single-Shot Submit Rule）
+  - 実行: Audience-Fit Hook + Soft-CTA + 返信誘導の問いを投入し、snapshot直後に送信1回のみ
+  - 完了条件: 投稿URL取得
+  - 前提: P2完了後に再実行
+  - 期待効果: プロフィール訪問増（X100に直結）
 
 ## NEXT（次サイクル候補）
 - [ ] Chrome拡張でXタブattach完了後、P2/P3を即実行（最優先・毎サイクル再確認・再接続後ただちに実行）
