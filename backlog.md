@@ -2,8 +2,8 @@
 
 ## NOW（次の15分で実行・優先順）
 - [x] P1: Browser Relay安定化タスク（最優先）
-  - 実行: status/tabs再確認
-  - 実績: running=false, tabs=0（Attach-Gateへ後退）
+  - 実行: status/tabs/snapshot再確認
+  - 実績: running=true, tabs=1, snapshot成功（復帰確認）
   - 完了条件: tabs>=1 かつ `browser snapshot` 成功
   - 期待効果: X投稿/リプ実行の復帰率向上
 - [ ] P2: X投稿 1本を実行（Single-Shot Submit Rule）
