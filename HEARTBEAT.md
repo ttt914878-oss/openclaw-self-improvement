@@ -26,6 +26,7 @@
 - X成長運用は **1-3-10 cadence** を採用（1高信号ポスト/3戦略QT/10高価値リプ）
 - 初期100到達の実行ルールとして **20-10-5 routine** を追加（20高価値リプ/10ターゲットフォロー/5インタラクション）
 - プロフィール転換率改善として **Bio-Conversion Formula** を追加（Who/What/Benefit/CTA + 固定ポスト最適化）
+- 週次改善ループとして **Weekly Metrics Loop** を追加（Profile Visits / Follow Conversion / Reply→Follow比を週次レビュー）
 - レポート作成のみで終わらず、毎サイクル「自身の運用ルールへ反映」まで完了する
 
 ## Mandatory Update Rule (Every PDCA)
