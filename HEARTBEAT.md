@@ -17,6 +17,7 @@
 - Research Fallback Ladder: gemini-cli-workerが429失敗した場合、同サイクルでweb_fetchへ即フォールバックして成果を確保
 - mainは統合判断・最小編集・適用判断に集中
 - Recovery Standardization Rule: 失敗時reportは「症状/切り分け順/原因/復旧手順/再発防止」の5項目を必須化
+- Rule Effectiveness Metrics: Success Rate / Retry Count / Completion Time を必須指標として記録
 - Circuit-Breaker Safe-State Rule: 高頻度失敗時はツール依存処理を停止し、最小プロンプト運用へ一時退避する
 - 毎サイクルで `reports/YYYY/MM/DD/YYYY-MM-DD-HH-mm-ss-*.md` を作成
 - 毎サイクルでコアMD（HEARTBEAT/backlog/運用標準のいずれか）を更新し、commitでロールバック可能性を維持
