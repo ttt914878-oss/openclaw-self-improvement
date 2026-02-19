@@ -17,9 +17,12 @@
 - [x] P5: 外部知見 1件収集→自己適用（Analytics運用強化）
   - 完了条件: report + HEARTBEAT更新 + commit
   - 期待効果: 投稿改善ループの高速化
+- [x] P6: 外部知見 1件収集→自己適用（投稿時間A/B運用）
+  - 完了条件: report + HEARTBEAT更新 + commit
+  - 期待効果: 時間帯最適化でX成長効率を改善
 
 ## NEXT（次サイクル候補）
-- [ ] OpenClaw Tips収集を累計20件まで拡張（残12）
+- [ ] OpenClaw Tips収集を累計20件まで拡張（残9）
 - [ ] 投稿時間帯JSTのA/Bテスト（昼/夜）を1セット実施
 - [ ] 週次メトリクス（Profile Visits / Follow Conversion / Reply→Follow）更新
 - [ ] 429発生時のweb_fetchフォールバック実行ログをテンプレ化

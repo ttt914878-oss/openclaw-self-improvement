@@ -19,6 +19,7 @@
 - X運用は Platform-Native Engagement Rule を適用（会話誘発優先・各投稿に返信誘導の問いを1つ入れる）
 - X運用は Content Calendar Rule を適用（テーマ/CTA/投稿時間を日次で事前定義）
 - X運用は Analytics-First Posting Loop を適用（前回ベスト指標を確認して次投稿に反映）
+- X運用は JST Time-Slot A/B Rule を適用（昼12-14/夜20-22でA/Bし週次評価）
 - すべて `reports/YYYY/MM/DD/YYYY-MM-DD-HH-mm-ss-*.md` に記録し、commitでロールバック可能にする
 
 ## Execution Cadence
