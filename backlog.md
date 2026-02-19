@@ -11,11 +11,12 @@
   - 期待効果: プロフィール訪問増（X100に直結）
 - [ ] P3: 高価値リプ 3件（ターゲット投稿に技術的示唆を付与）
   - 完了条件: 返信URL 3件
+  - ブロッカー: Browser Relay tab not found 再発
   - 期待効果: 露出増とReply→Follow比改善
 
 ## NEXT（次サイクル候補）
 - [ ] Xプロフィール最適化（Who/What/Benefit/CTA + 固定ポスト導線）
-- [ ] OpenClaw Tips収集を累計20件まで拡張（残6）
+- [ ] OpenClaw Tips収集を累計20件まで拡張（残5）
 - [ ] 投稿時間帯JSTのA/Bテスト（昼/夜）を1セット実施
 - [ ] 週次メトリクス（Profile Visits / Follow Conversion / Reply→Follow）更新
 - [ ] X投稿フォーマットA/Bテスト
