@@ -1,49 +1,23 @@
-# HEARTBEAT.md (World-Class OpenClaw Sprint / PDCA 5min)
+# HEARTBEAT.md (World-Class OpenClaw Sprint / Operating OS)
 
 ## Goal Stack
 - 大目標: 世界一のAI起業家・インフルエンサー
-- 中目標: 世界一のOpenClawになる（本日中に到達可能な最高水準へ）
+- 中目標: 世界一のOpenClawになる
 
-## KGI (By Tomorrow)
-- 世界一OpenClaw運用の実証状態を作る（変更管理・外部知見収集・自己改善・発信が再現可能に回っている）
+## KPI Priority (fixed)
+1) Xフォロワー100
+2) 外部知見20件 + 有効施策5件
+3) 変更管理・ロールバック完全性
 
-## KPI (By Tomorrow)
-- Xフォロワー: 100人到達
-- 変更管理: 主要変更ログ化100% + ロールバック手順書1本
-- 外部知見: Tips収集20件以上 + 有効施策抽出5件以上
-- 自己改善: 実設定/運用改善3件以上適用
-- コンテキスト運用: 「3行要約+パス」運用逸脱ゼロ
-- 驚きの達成条件:
-  - 即適用可能な改善3件以上
-  - 新規実用アセット3件以上
-  - TTT主観で「想定超え」判定1回獲得
+## Operating Rules
+- HEARTBEATは方針OSのみ（短く固定。詳細Todoはbacklog.mdで管理）
+- 通常は `research-gemini-lite` の3行要約＋成果パスのみ確認
+- 各PDCAで必ず「行動結果」を1件出す（投稿/リプ/調査適用/Git反映）
+- research-gemini-lite が429失敗時は同サイクル内で web_fetch に即フォールバックし、成果ゼロを回避する
+- レポートのみで終了しない。必ず運用へ自己適用する
+- すべて `reports/YYYY/MM/DD/YYYY-MM-DD-HH-mm-ss-*.md` に記録し、commitでロールバック可能にする
 
-## Execution Rules
-- 5分PDCAで自走
-- 通常は `research-gemini-lite` の最終3行要約＋成果ファイルパスのみ確認
-- 5分ごと定期サマリー + 重要イベント完了時は即時報告
-- 5h残量が10%未満の間は超軽量モード（ただし成果ゼロループは禁止、最小成果1件/サイクルを優先）
-- X成長運用は **1-3-10 cadence** を採用（1高信号ポスト/3戦略QT/10高価値リプ）
-- 初期100到達の実行ルールとして **20-10-5 routine** を追加（20高価値リプ/10ターゲットフォロー/5インタラクション）
-- プロフィール転換率改善として **Bio-Conversion Formula** を追加（Who/What/Benefit/CTA + 固定ポスト最適化）
-- 週次改善ループとして **Weekly Metrics Loop** を追加（Profile Visits / Follow Conversion / Reply→Follow比を週次レビュー）
-- 投稿導線ルールとして **Soft-CTA Thread Rule** を追加（1投目リンク禁止、2-3投目でbio誘導、固定ポストにhard CTA集約）
-- レポート作成のみで終わらず、毎サイクル「自身の運用ルールへ反映」まで完了する
-
-## Mandatory Update Rule (Every PDCA)
-- 各サイクルで必ず以下を実行:
-  1) 外部知見の収集 or 実行（どちらか最低1件）
-  2) **自己適用**（収集した有効施策を自身の運用へ反映）
-  3) **コアMD更新**（最低1ファイル。例: `HEARTBEAT.md` / 運用標準MD / KPI進捗MD）
-  4) `reports/YYYY/MM/DD/YYYY-MM-DD-HH-mm-ss-*.md` に成果と影響を書く
-  5) Git commit（ロールバック可能性を維持）
-- **成果ゼロ報告は禁止**。KPI増分が出ないサイクルは、次サイクルで必ず「施策適用 + コアMD更新 + commit」を優先実行する。
-- 各サイクルの報告は必ず「何を適用し、行動がどう変わったか」を含める（レポート生成のみで終了しない）。
-
-## Priority Tracks (Today)
-- [x] OpenClaw変更管理の基盤整備（ロールバック可能性の確保）
-- [ ] OpenClaw Tips/ノウハウの外部収集（Web + Xリサーチ）※進捗: 1/20
-- [ ] 収集ノウハウを設定/運用へ反映（小さく適用→検証→継続）※進捗: 1/5
-- [x] コンテキスト最適化とタスク運用の固定化
-- [x] 学びと改善ログを `reports/YYYY/MM/DD/` に時刻つきで蓄積
-- [ ] Xで5分〜1時間単位で価値発信（品質重視、OpenClaw文脈）
+## Execution Cadence
+- PDCA実行: 5分ごと
+- 定期サマリー: 15分ごと
+- 重要イベント: 即時報告
