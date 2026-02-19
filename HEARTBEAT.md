@@ -12,6 +12,7 @@
 ## Operating Rules
 - HEARTBEATは方針OSのみ（短く固定。詳細Todoはbacklog.mdで管理）
 - 通常は `research-gemini-lite` の3行要約＋成果パスのみ確認
+- 調査ツールは Tool-Selection Rule を適用（web_search/web_fetch優先、JS必要時のみbrowserへ昇格）
 - 各PDCAで必ず「行動結果」を1件出す（投稿/リプ/調査適用/Git反映）
 - 15分で調査タスクが2件続いたら、次サイクルは必ずX実行タスク（投稿またはリプ3件）を優先する
 - X実操作がブロックされた場合は、次サイクル最優先で「Browser Relay接続確認→tab attach」を実施し、復帰可否を先に確定する

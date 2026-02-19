@@ -15,6 +15,9 @@
 - [x] P4: 外部知見 1件収集→自己適用（ブロッカー時フォールバック）
   - 完了条件: report + HEARTBEAT更新 + commit
   - 期待効果: 外部知見KPI前進 + X運用改善
+- [x] P5: 外部知見 1件収集→自己適用（OpenClaw Web tools最適化）
+  - 完了条件: report + HEARTBEAT更新 + commit
+  - 期待効果: 調査の成功率向上とブロッカー回避
 
 ## NEXT（次サイクル候補）
 - [ ] gateway再起動後にX投稿1本を実行（URL取得）
