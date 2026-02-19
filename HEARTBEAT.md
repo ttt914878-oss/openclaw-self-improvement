@@ -7,12 +7,12 @@
 1) 外部知見20件（出典付き）
 2) 有効施策5件を自己適用（設定/運用へ反映）
 3) 1サイクル1改善（コアMD更新 + report + commit）
-4) `research-gemini-lite` 委譲率 80%以上
+4) `gemini-cli-worker` 委譲率 80%以上
 
 ## Operating Rules
 - X投稿/ブラウザ自動操作は当面停止（このモードでは扱わない）
 - 各5分サイクルで必ず1成果（調査 or 適用 or検証）
-- 軽タスク（検索/要約/比較/下書き/テンプレ化）は原則 `research-gemini-lite` へ委譲
+- 軽タスク（検索/要約/比較/下書き/テンプレ化）は原則 `gemini-cli-worker` へ委譲
 - mainは統合判断・最小編集・適用判断に集中
 - 毎サイクルで `reports/YYYY/MM/DD/YYYY-MM-DD-HH-mm-ss-*.md` を作成
 - 毎サイクルでコアMD（HEARTBEAT/backlog/運用標準のいずれか）を更新し、commitでロールバック可能性を維持
