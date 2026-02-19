@@ -15,7 +15,7 @@
 
 ## NEXT（次サイクル候補）
 - [ ] Xプロフィール最適化（Who/What/Benefit/CTA + 固定ポスト導線）
-- [ ] OpenClaw Tips収集を累計20件まで拡張（残7）
+- [ ] OpenClaw Tips収集を累計20件まで拡張（残6）
 - [ ] 投稿時間帯JSTのA/Bテスト（昼/夜）を1セット実施
 - [ ] 週次メトリクス（Profile Visits / Follow Conversion / Reply→Follow）更新
 - [ ] X投稿フォーマットA/Bテスト

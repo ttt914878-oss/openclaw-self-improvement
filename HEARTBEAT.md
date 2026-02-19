@@ -26,6 +26,7 @@
 - X運用は Analytics-First Posting Loop を適用（前回ベスト指標を確認して次投稿に反映）
 - X運用は JST Time-Slot A/B Rule を適用（昼12-14/夜20-22でA/Bし週次評価）
 - X運用は Engagement Signal Mix Rule を適用（返信/再共有/プロフィール訪問の3シグナルを投稿設計に含める）
+- X運用は Audience-Fit Hook Rule を適用（対象読者への具体メリットを1文目に入れる）
 - すべて `reports/YYYY/MM/DD/YYYY-MM-DD-HH-mm-ss-*.md` に記録し、commitでロールバック可能にする
 
 ## Execution Cadence
