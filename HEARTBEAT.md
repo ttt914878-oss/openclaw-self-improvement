@@ -22,7 +22,7 @@
 - 同ブロッカーが2サイクル継続した場合は、次サイクルでgateway再起動を最優先実行する
 - Browser Relayの間欠不良時は Intermittent Relay Guard を適用（snapshot成功直後に実操作、失敗時は即時記録して再試行）
 - Compose送信が不安定な場合は Single-Shot Submit Rule を適用（snapshot直後1回クリック、失敗時はモーダル再オープン）
-- Single-Shot Submitが2回連続失敗した場合は、同サイクルでリプ3件実行へ切替えてX実行KPIの未達連鎖を止める
+- Single-Shot Submitが2回連続失敗した場合は、次サイクルでリプ3件実行を最優先してX実行KPIの未達連鎖を止める
 - Compose ref instability継続時は Close-and-Reopen Submit Rule を適用（モーダル再生成後に再送信）
 - browser control serviceエラー時は Service-Recover Rule を適用（再試行せずstatus/tabs確認→必要時gateway再起動）
 - status/tabs/snapshotが揃って成功したサイクルは P1完了としてP2送信再試行へ即移行する
