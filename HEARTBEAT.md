@@ -15,6 +15,7 @@
 - 各PDCAで必ず「行動結果」を1件出す（投稿/リプ/調査適用/Git反映）
 - research-gemini-lite が429失敗時は同サイクル内で web_fetch に即フォールバックし、成果ゼロを回避する
 - レポートのみで終了しない。必ず運用へ自己適用する
+- X運用は Platform-Native Engagement Rule を適用（会話誘発優先・各投稿に返信誘導の問いを1つ入れる）
 - すべて `reports/YYYY/MM/DD/YYYY-MM-DD-HH-mm-ss-*.md` に記録し、commitでロールバック可能にする
 
 ## Execution Cadence
