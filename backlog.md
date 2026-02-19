@@ -14,6 +14,9 @@
 - [x] P4: 外部知見 1件収集→自己適用（フォールバック実行）
   - 完了条件: report + HEARTBEAT更新 + commit
   - 期待効果: 外部知見KPIの前進・運用ルール改善
+- [x] P5: 外部知見 1件収集→自己適用（Analytics運用強化）
+  - 完了条件: report + HEARTBEAT更新 + commit
+  - 期待効果: 投稿改善ループの高速化
 
 ## NEXT（次サイクル候補）
 - [ ] OpenClaw Tips収集を累計20件まで拡張（残12）
