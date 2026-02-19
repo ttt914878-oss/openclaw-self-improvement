@@ -1,12 +1,14 @@
 # backlog.md
 
 ## NOW（次の15分で実行・優先順）
-- [ ] P1: Browser Relay安定化タスク（最優先）
-  - 実行: Troubleshooting Ladder（status→gateway status→logs→doctor）を一巡し、snapshot 3回連続成功まで再試行
+- [x] P1: Browser Relay安定化タスク（最優先）
+  - 実行: gateway再起動後の復帰確認（status/tabs/snapshot）
+  - 実績: tabs=0（Chrome拡張attach待ち）を確認し記録
   - 完了条件: 3連続で `browser snapshot` 成功 + 記録1件
   - 期待効果: X投稿/リプ実行の復帰率向上
 - [ ] P2: X投稿 1本を実行（Audience-Fit Hook + Soft-CTA + 返信誘導の問い）
   - 完了条件: 投稿URL取得
+  - 前提: Chrome拡張でXタブattach完了
   - 期待効果: プロフィール訪問増（X100に直結）
 - [ ] P3: 高価値リプ 3件（競合ギャップ観点の技術コメント）
   - 完了条件: 返信URL 3件
