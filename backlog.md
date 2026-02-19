@@ -1,17 +1,15 @@
 # backlog.md
 
 ## NOW（次の15分で実行・優先順）
-- [x] P1: Browser Relay安定化タスク（最優先）
-  - 実行: status/tabs/snapshot再確認（Compose状態も検証）
-  - 実績: running=true, tabs=1, snapshot成功、Compose表示確認
+- [ ] P1: Browser Relay安定化タスク（最優先）
+  - 実行: Service-Recover手順（status/tabs/snapshot→必要時gateway再起動）
   - 完了条件: running=true, tabs>=1, `browser snapshot` 成功
   - 期待効果: X投稿/リプ実行の復帰率向上
 - [ ] P2: 高価値リプ 3件（競合ギャップ観点の技術コメント）
   - 完了条件: 返信URL 3件
   - 前提: P1完了（attach確認）
-  - 実行理由: P3投稿送信失敗の継続により優先切替を維持
-  - 現在状態: Compose残存 + serviceエラーで遷移不能（次サイクルで復旧優先）
-  - 期待効果: 露出増とReply→Follow比改善（X実行KPIを先に回復）
+  - 実行理由: 投稿送信失敗の継続により、先にX実行KPIを回復
+  - 期待効果: 露出増とReply→Follow比改善
 - [ ] P3: X投稿 1本を実行（Single-Shot Submit Rule）
   - 実行: Audience-Fit Hook + Soft-CTA + 返信誘導の問いを投入し、snapshot直後に送信1回のみ
   - 完了条件: 投稿URL取得
