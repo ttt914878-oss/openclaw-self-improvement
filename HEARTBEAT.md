@@ -24,6 +24,7 @@
 - gateway再起動後にtabs=0の場合は Relay Reattach Rule を適用（拡張アイコンONでattachを最優先）
 - tabs=0の間は Attach-Gate Rule を適用（投稿/リプを保留し、attach確認を最優先）
 - Attach未完了が2サイクル続く場合は、次サイクル冒頭で「Chrome拡張アイコンONでXタブattachを依頼」を明示して復旧を促す
+- Attach Prompt Escalation Rule を適用（attach未完了中は毎サイクル手順を明示し、復旧優先）
 - Relay失敗が3サイクル連続した場合、追加調査ではなく「投稿下書き1本＋高価値リプ下書き3件」を先行作成して実行待ちキューを維持する
 - X未達がPDCAレビュー2回連続した場合、次レビューまでBrowser Relay安定化を最優先タスクに固定する
 - research-gemini-lite が429失敗時は同サイクル内で web_fetch に即フォールバックし、成果ゼロを回避する
