@@ -10,7 +10,7 @@
   1) 実装と説明のズレが起きやすい
   2) 長文出力の混入リスク
   3) セッション履歴肥大
-- Next 1h Priority: 効率悪化の原因1件を特定して除去
+- Next 1h Priority: 3バッチ連続で1成果あたりコスト比較を記録し、悪化原因を1件除去
 - Core Files:
   - HEARTBEAT.md
   - backlog.md

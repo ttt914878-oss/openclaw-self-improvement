@@ -26,6 +26,7 @@
 - Codex入力は固定スロット化（HEARTBEAT + backlog + 最新必要断片のみ）
 - 長文生成は常に Gemini 側でファイルへ直書きし、Codexへは3行要約+pathのみ返す
 - 同一内容の再分析・再説明は禁止。差分のみ扱う
+- Model Router Rule: 低複雑度タスクは軽量モデル、統合判断のみ高性能モデルへ自動振分け
 - 目標: 「必要コンテキストは減少、成果は増加」を毎時間達成する
 
 ## Autonomous Improvement Loop (Mandatory)
