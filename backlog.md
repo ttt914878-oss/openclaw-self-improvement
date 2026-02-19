@@ -2,8 +2,9 @@
 
 ## NOW
 - [ ] P1: 外部知見を2件収集（OpenClaw docs + context optimization）
+  - 進捗: 1/2（`2026-02-19-17-44-55-research-improvement-kpi-increment.md`）
   - 完了条件: 出典URL付きreport 2件
-  - 期待効果: 外部知見KPIを17→19へ前進
+  - 期待効果: 外部知見KPIを18→19へ前進
 - [ ] P2: 有効施策1件を自己適用（運用ルールへ反映）
   - 完了条件: コアMD更新 + report + commit
   - 期待効果: 施策の実運用転換率を維持
