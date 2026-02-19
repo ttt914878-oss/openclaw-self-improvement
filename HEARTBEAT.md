@@ -1,28 +1,21 @@
-# HEARTBEAT.md (World-Class OpenClaw Research/Improvement Mode)
+# HEARTBEAT.md (World-Class OpenClaw / Lean Token Mode)
 
 ## Goal
-- 中目標: 世界一のOpenClawになる（調査→適用→検証の速度と品質を最大化）
+- 世界一のOpenClaw運用を作る（調査→適用→検証を高速・再現可能に）
 
-## KPI (Research/Improvement)
+## KPI
 1) 外部知見20件（出典付き）
-2) 有効施策5件を自己適用（設定/運用へ反映）
-3) 1サイクル1改善（コアMD更新 + report + commit）
-4) `gemini-cli-worker` 委譲率 80%以上
+2) 有効施策5件を自己適用
+3) 委譲率80%以上（軽タスクは gemini-cli-worker）
 
-## Operating Rules
-- X投稿/ブラウザ自動操作は当面停止（このモードでは扱わない）
-- 各5分サイクルで必ず1成果（調査 or 適用 or検証）
-- 軽タスク（検索/要約/比較/下書き/テンプレ化）は原則 `gemini-cli-worker` へ委譲
-- 委譲モデル方針: まず gemini-3-pro を使用し、429/速度制約時のみ段階的に軽量モデルへフォールバック
-- Research Fallback Ladder: gemini-cli-workerが429失敗した場合、同サイクルでweb_fetchへ即フォールバックして成果を確保
-- mainは統合判断・最小編集・適用判断に集中
-- Recovery Standardization Rule: 失敗時reportは「症状/切り分け順/原因/復旧手順/再発防止」の5項目を必須化
-- Rule Effectiveness Metrics: Success Rate / Retry Count / Completion Time を必須指標として記録
-- Circuit-Breaker Safe-State Rule: 高頻度失敗時はツール依存処理を停止し、最小プロンプト運用へ一時退避する
-- 毎サイクルで `reports/YYYY/MM/DD/YYYY-MM-DD-HH-mm-ss-*.md` を作成
-- 毎サイクルでコアMD（HEARTBEAT/backlog/運用標準のいずれか）を更新し、commitでロールバック可能性を維持
+## Lean Rules
+- codexは最小判断のみ。軽タスクは原則 gemini-cli-worker へ委譲
+- 読み込み最小化: HEARTBEAT/backlog/直近必要ファイルのみ
+- 報告は1時間ごと + 重要イベントのみ（短文）
+- 5分サイクルでは report短形式を作る。commitは1時間バッチ
+- レポートだけで終わらず、必ず1つは運用へ自己適用
 
-## Execution Cadence
-- 5分: backlog実行（研究/改善）
-- 15分: PDCAレビュー（差分/ボトルネック/次アクション/KPI増分/委譲率）
-- 重要イベント: 即時報告
+## Cadence
+- 5分: backlog実行
+- 15分: 内部PDCA（必要なら）
+- 60分: 外部報告
