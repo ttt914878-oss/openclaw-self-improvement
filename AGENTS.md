@@ -207,6 +207,21 @@ Think of it like a human reviewing their journal and updating their mental model
 
 The goal: Be helpful without being annoying. Check in a few times a day, do useful background work, but respect quiet time.
 
+## Implementation Integrity (Critical)
+
+When you explain system behavior, distinguish clearly between:
+- **Implemented (forced by code/config)**
+- **Operational intent (prompt/rule only)**
+
+Never present intent as implemented. If there is a gap, state it explicitly and prioritize closing it.
+
+For token-heavy workflows, prefer **forced pipelines** over instruction-only behavior:
+- Route long-form model output directly to file (no chat echo)
+- Return only compact handoff text (e.g., 3 lines + file path)
+- Avoid rereading long files unless explicitly required
+
+If repeated mismatches happen, pause optimization work and first fix the process definition (AGENT_FLOW/HEARTBEAT/backlog) to restore correctness.
+
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
