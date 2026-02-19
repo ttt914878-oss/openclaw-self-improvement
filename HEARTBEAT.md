@@ -17,6 +17,7 @@
 - research-gemini-lite が429失敗時は同サイクル内で web_fetch に即フォールバックし、成果ゼロを回避する
 - レポートのみで終了しない。必ず運用へ自己適用する
 - X運用は Platform-Native Engagement Rule を適用（会話誘発優先・各投稿に返信誘導の問いを1つ入れる）
+- X運用は Content Calendar Rule を適用（テーマ/CTA/投稿時間を日次で事前定義）
 - すべて `reports/YYYY/MM/DD/YYYY-MM-DD-HH-mm-ss-*.md` に記録し、commitでロールバック可能にする
 
 ## Execution Cadence
