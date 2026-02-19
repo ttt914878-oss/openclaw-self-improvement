@@ -9,7 +9,8 @@
 - [ ] P2: 高価値リプ 3件（競合ギャップ観点の技術コメント）
   - 完了条件: 返信URL 3件
   - 前提: P1完了（attach確認）
-  - 実行理由: P3投稿送信が再度失敗したため優先切替を維持
+  - 実行理由: P3投稿送信失敗の継続により優先切替を維持
+  - 現在状態: Compose残存 + serviceエラーで遷移不能（次サイクルで復旧優先）
   - 期待効果: 露出増とReply→Follow比改善（X実行KPIを先に回復）
 - [ ] P3: X投稿 1本を実行（Single-Shot Submit Rule）
   - 実行: Audience-Fit Hook + Soft-CTA + 返信誘導の問いを投入し、snapshot直後に送信1回のみ

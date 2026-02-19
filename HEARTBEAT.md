@@ -24,7 +24,7 @@
 - Compose送信が不安定な場合は Single-Shot Submit Rule を適用（snapshot直後1回クリック、失敗時はモーダル再オープン）
 - Single-Shot Submitが2回連続失敗した場合は、次サイクルでリプ3件実行を最優先してX実行KPIの未達連鎖を止める
 - Compose ref instability継続時は Close-and-Reopen Submit Rule を適用（モーダル再生成後に再送信）
-- browser control serviceエラー時は Service-Recover Rule を適用（再試行せずstatus/tabs確認→必要時gateway再起動）
+- browser control serviceエラー時は Service-Recover Rule を適用（当該サイクルでは再試行せずstatus/tabs確認→必要時gateway再起動）
 - status/tabs/snapshotが揃って成功したサイクルは P1完了としてP2送信再試行へ即移行する
 - gateway再起動後にtabs=0の場合は Relay Reattach Rule を適用（拡張アイコンONでattachを最優先）
 - tabs=0の間は Attach-Gate Rule を適用（投稿/リプを保留し、attach確認を最優先）
