@@ -2,8 +2,8 @@
 
 ## NOW（次の15分で実行・優先順）
 - [x] P1: Browser Relay安定化タスク（最優先）
-  - 実行: status/tabs/snapshot再確認
-  - 実績: running=true, tabs=1, snapshot成功（接続維持を確認）
+  - 実行: status/tabs再確認
+  - 実績: running=false, tabs=0（Attach-Gateへ後退）
   - 完了条件: tabs>=1 かつ `browser snapshot` 成功
   - 期待効果: X投稿/リプ実行の復帰率向上
 - [ ] P2: X投稿 1本を実行（Single-Shot Submit Rule）
@@ -19,7 +19,7 @@
   - 期待効果: 露出増とReply→Follow比改善
 
 ## NEXT（次サイクル候補）
-- [ ] Chrome拡張でXタブattach完了後、P2/P3を即実行（最優先・毎サイクル再確認）
+- [ ] Chrome拡張でXタブattach完了後、P2/P3を即実行（最優先・毎サイクル再確認・再接続後ただちに実行）
 - [x] attach未完了時のユーザー向け1行依頼テンプレを固定化
 - [x] Relay不安定時の「投稿下書き1本/リプ3件」先行キュー運用
 - [ ] Xプロフィール最適化（Who/What/Benefit/CTA + 固定ポスト導線）
