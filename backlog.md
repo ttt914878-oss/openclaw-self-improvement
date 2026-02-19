@@ -1,14 +1,15 @@
 # backlog.md
 
 ## NOW（次の15分で実行・優先順）
-- [ ] P1: Browser Relay安定化タスク（最優先）
+- [x] P1: Browser Relay安定化タスク（最優先）
   - 実行: status/tabs/snapshot再確認
+  - 実績: running=true, tabs=1, snapshot成功
   - 完了条件: running=true, tabs>=1, `browser snapshot` 成功
   - 期待効果: X投稿/リプ実行の復帰率向上
 - [ ] P2: 高価値リプ 3件（競合ギャップ観点の技術コメント）
   - 完了条件: 返信URL 3件
   - 前提: P1完了（attach確認）
-  - 実行理由: P2投稿送信が2回連続失敗したため優先切替
+  - 実行理由: P3投稿送信が再度失敗したため優先切替を維持
   - 期待効果: 露出増とReply→Follow比改善（X実行KPIを先に回復）
 - [ ] P3: X投稿 1本を実行（Single-Shot Submit Rule）
   - 実行: Audience-Fit Hook + Soft-CTA + 返信誘導の問いを投入し、snapshot直後に送信1回のみ
