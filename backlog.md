@@ -1,20 +1,21 @@
 # backlog.md
 
-## NOW（今サイクルで実行）
-- [ ] X投稿 1本（KPI: X100）
+## NOW（次の15分で実行・優先順）
+- [ ] P1: X投稿 1本を実行（Soft-CTA Thread Rule + 返信誘導の問いを1つ）
   - 完了条件: 投稿URL取得
-- [ ] 高価値リプ 3件（KPI: X100）
+  - 期待効果: プロフィール訪問増（X100に直結）
+- [ ] P2: 高価値リプ 3件（ターゲット投稿に技術的示唆を付与）
   - 完了条件: 返信URL 3件
-- [x] 外部知見 1件収集→自己適用 1件（KPI: 外部知見/有効施策）
-  - 完了条件: report + HEARTBEAT/運用MD更新 + commit
-- [x] 外部知見 1件収集→自己適用 1件（KPI: 外部知見/有効施策）
-  - 完了条件: report + HEARTBEAT/運用MD更新 + commit
+  - 期待効果: 露出増とReply→Follow比改善
+- [ ] P3: Xプロフィール最適化（Who/What/Benefit/CTA + 固定ポスト導線）
+  - 完了条件: 変更前後のスクショ/テキスト差分をreport化
+  - 期待効果: Profile Visit→Follow転換率改善
 
 ## NEXT（次サイクル候補）
-- [ ] OpenClaw Tips収集を累計20件まで拡張
-- [ ] 外部知見 1件収集→自己適用 1件（KPI: 外部知見/有効施策）
-- [ ] 外部知見 1件収集→自己適用 1件（KPI: 外部知見/有効施策）
-- [ ] 有効施策を5件→実運用へ全適用
+- [ ] OpenClaw Tips収集を累計20件まで拡張（残12）
+- [ ] 投稿時間帯JSTのA/Bテスト（昼/夜）を1セット実施
+- [ ] 週次メトリクス（Profile Visits / Follow Conversion / Reply→Follow）更新
+- [ ] 429発生時のweb_fetchフォールバック実行ログをテンプレ化
 - [ ] X投稿フォーマットA/Bテスト
 
 ## LATER（本日後半）

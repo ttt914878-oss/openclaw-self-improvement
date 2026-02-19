@@ -13,6 +13,7 @@
 - HEARTBEATは方針OSのみ（短く固定。詳細Todoはbacklog.mdで管理）
 - 通常は `research-gemini-lite` の3行要約＋成果パスのみ確認
 - 各PDCAで必ず「行動結果」を1件出す（投稿/リプ/調査適用/Git反映）
+- 15分で調査タスクが2件続いたら、次サイクルは必ずX実行タスク（投稿またはリプ3件）を優先する
 - research-gemini-lite が429失敗時は同サイクル内で web_fetch に即フォールバックし、成果ゼロを回避する
 - レポートのみで終了しない。必ず運用へ自己適用する
 - X運用は Platform-Native Engagement Rule を適用（会話誘発優先・各投稿に返信誘導の問いを1つ入れる）
