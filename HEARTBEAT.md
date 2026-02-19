@@ -14,6 +14,7 @@
 - 各5分サイクルで必ず1成果（調査 or 適用 or検証）
 - 軽タスク（検索/要約/比較/下書き/テンプレ化）は原則 `gemini-cli-worker` へ委譲
 - 委譲モデル方針: まず gemini-3-pro を使用し、429/速度制約時のみ段階的に軽量モデルへフォールバック
+- Research Fallback Ladder: gemini-cli-workerが429失敗した場合、同サイクルでweb_fetchへ即フォールバックして成果を確保
 - mainは統合判断・最小編集・適用判断に集中
 - 毎サイクルで `reports/YYYY/MM/DD/YYYY-MM-DD-HH-mm-ss-*.md` を作成
 - 毎サイクルでコアMD（HEARTBEAT/backlog/運用標準のいずれか）を更新し、commitでロールバック可能性を維持
