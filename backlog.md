@@ -1,11 +1,13 @@
 # backlog.md
 
 ## NOW（次の15分で実行・優先順）
-- [ ] P1: gateway再起動を実施し、Browser Relay復旧確認（status/tabs/snapshot）
+- [x] P1: gateway再起動を実施し、Browser Relay復旧確認（status/tabs/snapshot）
   - 完了条件: `browser snapshot` でXタブ参照成功
+  - 実績: snapshot成功を確認（間欠的にtab not found再発）
   - 期待効果: X実操作の復帰（投稿/リプ再開）
 - [ ] P2: X投稿 1本を実行（Soft-CTA Thread Rule + 返信誘導の問いを1つ）
   - 完了条件: 投稿URL取得
+  - ブロッカー: Browser Relay間欠不良（snapshot成功直後の実行を優先）
   - 期待効果: プロフィール訪問増（X100に直結）
 - [ ] P3: 高価値リプ 3件（ターゲット投稿に技術的示唆を付与）
   - 完了条件: 返信URL 3件
