@@ -17,7 +17,7 @@
   - 期待効果: 露出増とReply→Follow比改善
 
 ## NEXT（次サイクル候補）
-- [ ] Chrome拡張でXタブattach完了後、P2/P3を即実行（最優先）
+- [ ] Chrome拡張でXタブattach完了後、P2/P3を即実行（最優先・毎サイクル再確認）
 - [x] Relay不安定時の「投稿下書き1本/リプ3件」先行キュー運用
 - [ ] Xプロフィール最適化（Who/What/Benefit/CTA + 固定ポスト導線）
 - [ ] OpenClaw Tips収集を累計20件まで拡張（残3）
