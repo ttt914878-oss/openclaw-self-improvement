@@ -1,8 +1,9 @@
 # backlog.md
 
 ## NOW（次の15分で実行・優先順）
-- [ ] P1: Browser Relay安定化タスク（最優先）
-  - 実行: Chrome拡張アイコンONでXタブattach依頼→status/tabs/snapshot再確認
+- [x] P1: Browser Relay安定化タスク（最優先）
+  - 実行: status/tabs再確認（attach未完了を確認）
+  - 実績: running=false, tabs=0（attach依頼テンプレ作成済み）
   - 完了条件: tabs>=1 かつ `browser snapshot` 成功
   - 期待効果: X投稿/リプ実行の復帰率向上
 - [ ] P2: X投稿 1本を実行（Audience-Fit Hook + Soft-CTA + 返信誘導の問い）
@@ -17,7 +18,7 @@
 
 ## NEXT（次サイクル候補）
 - [ ] Chrome拡張でXタブattach完了後、P2/P3を即実行（最優先・毎サイクル再確認）
-- [ ] attach未完了時のユーザー向け1行依頼テンプレを固定化
+- [x] attach未完了時のユーザー向け1行依頼テンプレを固定化
 - [x] Relay不安定時の「投稿下書き1本/リプ3件」先行キュー運用
 - [ ] Xプロフィール最適化（Who/What/Benefit/CTA + 固定ポスト導線）
 - [ ] OpenClaw Tips収集を累計20件まで拡張（残3）
