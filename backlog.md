@@ -1,8 +1,9 @@
 # backlog.md
 
 ## NOW（次の15分で実行・優先順）
-- [ ] P1: X実操作ブロッカー解消（Browser Relay接続確認→tab attach）
+- [x] P1: X実操作ブロッカー解消（Browser Relay接続確認→tab attach）
   - 完了条件: browser snapshotでXタブ参照可能
+  - 実績: status/tabs確認済み、snapshotはtab not found（ブロッカー特定）
   - 期待効果: 投稿/リプの実行復帰
 - [ ] P2: X投稿 1本を実行（Soft-CTA Thread Rule + 返信誘導の問いを1つ）
   - 完了条件: 投稿URL取得
@@ -12,6 +13,7 @@
   - 期待効果: 露出増とReply→Follow比改善
 
 ## NEXT（次サイクル候補）
+- [ ] gateway再起動後にX投稿1本を実行（URL取得）
 - [ ] Xプロフィール最適化（Who/What/Benefit/CTA + 固定ポスト導線）
 - [ ] OpenClaw Tips収集を累計20件まで拡張（残9）
 - [ ] 投稿時間帯JSTのA/Bテスト（昼/夜）を1セット実施
