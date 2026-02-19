@@ -9,7 +9,7 @@
   - 実行: Audience-Fit Hook + Soft-CTA + 返信誘導の問いを投入し、snapshot直後に送信1回のみ
   - 完了条件: 投稿URL取得
   - 前提: P1完了（attach確認）
-  - 現在状態: Compose要素参照の間欠不安定が継続（Postクリック失敗）
+  - 現在状態: browser control serviceエラーで送信失敗（Postクリック失敗）
   - 期待効果: Postクリック間欠エラー回避と投稿完了率改善
 - [ ] P3: 高価値リプ 3件（競合ギャップ観点の技術コメント）
   - 完了条件: 返信URL 3件
