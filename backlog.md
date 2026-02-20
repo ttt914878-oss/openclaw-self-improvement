@@ -6,12 +6,13 @@
 - [x] 有効施策1件を自己適用（`scripts/hourly_batch_check.sh` 追加）
 - [x] テスト1件（不足成果物を `CHECK=NG` で検出）
 - [x] 効率記録: 成果件数 / 推定トークン / 1成果あたりコスト（`2026-02-20-06-45-hourly-batch.md`）
+- [x] 失敗パターン→回復手順の1ページ標準化（`docs/recovery-playbook.md`）
 
 ## NEXT
 - [ ] 外部調査完了後にKPI増分（外部知見/有効施策）を反映
 - [ ] 3バッチ連続で「1成果あたりコスト」比較ログを記録
-- [ ] 失敗パターン→回復手順の1ページ標準化
-- [ ] 明朝向け「世界一OpenClaw化ロードマップ」短報
+- [x] 失敗パターン→回復手順の1ページ標準化（`docs/recovery-playbook.md`）
+- [x] 明朝向け「世界一OpenClaw化ロードマップ」短報（`reports/2026-02-20-roadmap-brief.md`）
 
 ## Rule
 - 1時間バッチでNOWから最低1件は完了

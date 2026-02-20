@@ -207,6 +207,29 @@ Think of it like a human reviewing their journal and updating their mental model
 
 The goal: Be helpful without being annoying. Check in a few times a day, do useful background work, but respect quiet time.
 
+## Memory Topology Guard (Critical)
+
+Canonical memory set (do not sprawl):
+- `HEARTBEAT.md` (policy)
+- `backlog.md` (execution queue)
+- `AGENT_FLOW.md` (runtime I/O contract)
+- `SESSION_SNAPSHOT.md` (handoff for frequent `/new`)
+- `MEMORY.md` + `memory/YYYY-MM-DD.md` (long-term + daily log)
+
+When you create a new operational markdown file, you must:
+1. Justify why existing canonical files are insufficient
+2. Add ownership + read-policy in `AGENT_FLOW.md`
+3. Add cleanup/merge plan (when to archive/remove)
+
+If memory/file sprawl is detected, stop and consolidate before continuing optimization work.
+
+## Mistake-to-Rule Loop (Mandatory)
+When a repeatable mistake is found:
+1. Write a 1-line root cause
+2. Add/modify one concrete rule in AGENTS/HEARTBEAT/AGENT_FLOW
+3. Implement one forced change (script/config), not only wording
+4. Record the prevention check in the next batch summary
+
 ## Implementation Integrity (Critical)
 
 When you explain system behavior, distinguish clearly between:
