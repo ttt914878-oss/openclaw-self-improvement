@@ -2,7 +2,7 @@
 set -euo pipefail
 
 GEMINI_CMD="${GEMINI_CMD:-gemini}"
-GEMINI_MODEL="gemini-2.5-flash-lite"
+GEMINI_MODEL="gemini-3-flash-preview"
 WORKSPACE_DIR="/home/ttt05/.openclaw/workspace"
 MEMORY_DIR="$WORKSPACE_DIR/memory"
 KAIZEN_LOG="$MEMORY_DIR/kaizen-log.md"

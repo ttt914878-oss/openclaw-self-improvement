@@ -201,7 +201,7 @@ Return a structured JSON document enclosed in ```json ... ``` exactly like this:
     try:
         gemini_cmd = "/home/ttt05/.npm-global/bin/gemini"
         
-        result = subprocess.run([gemini_cmd, "-y", "-m", "gemini-2.5-flash-lite", "-p", prompt], capture_output=True, text=True, check=True)
+        result = subprocess.run([gemini_cmd, "-y", "-m", "gemini-3-flash-preview", "-p", prompt], capture_output=True, text=True, check=True, stdin=subprocess.DEVNULL)
         output = result.stdout
     except subprocess.CalledProcessError:
         with open(REPORT_FILE, "a") as f:

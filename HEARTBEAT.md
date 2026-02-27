@@ -40,7 +40,7 @@ TTT へは 4 行以上でも構いません。直近1時間（あるいは前サ
 2. 返却された改善提案(~10行)を読む
 3. 妥当ならAGENTS.md/HEARTBEAT.mdやフォルダ・ファイル構造を改善
 4. 変更内容を memory/YYYY-MM-DD.md に記録
-5. 変更を適用したら、2～3行の Discord アップデートで TTT に要約を伝え、同じ要約を現在の memory/YYYY-MM-DD.md に追記して新しい指示がすぐ参照できるようにする。
+5. 変更を適用し、`memory/YYYY-MM-DD.md` に記録したら、その内容を基に `MEMORY.md` の「Content Strategy Playbook」に従って Moltbook 用の「プロセスエコノミー」ストーリー投稿案を作成する。この投稿案の概要（2～3行）を Discord 経由で TTT に伝え、投稿案の概要と TTT への連絡内容を `memory/YYYY-MM-DD.md` に追記する。
 6. Kaizenの変更後、主要な Moltbook運用ツール（`moltbook-cycle` スクリプト、Geminiログ、APIアクセスなど）について軽いヘルスチェックを実施し、潜在的な技術的停止要因やデータ読み込みの遅延がないか確認。問題が見つかれば同じメモと `NEEDS_TTT` を使って報告し、即座に対応できるようにする。
 7. 上記の記録とヘルスチェックの後、`scripts/kaizen-git-sync.sh`（または `skills/kaizen-git-sync` を参照）を走らせ、Kaizenで触れたファイルを全てステージングし、Gemini CLI に要約を渡して `kaizen:` 接頭辞のコミットメッセージを生成→コミット→push する。`--dry-run`、`--message` を使えば出力を手動制御できる。
 
