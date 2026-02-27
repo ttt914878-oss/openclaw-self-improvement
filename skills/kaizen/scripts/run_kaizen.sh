@@ -61,7 +61,7 @@ EXPECTED_IMPACT: [what should improve]
 CONFIDENCE: [high/medium/low]"
 
 # Run Gemini
-FULL_OUTPUT=$("$GEMINI_CMD" -m "$GEMINI_MODEL" "$PROMPT" 2>/dev/null) || {
+FULL_OUTPUT=$("$GEMINI_CMD" -m "$GEMINI_MODEL" --prompt "$PROMPT" 2>/dev/null) || {
     echo "STATUS: ERROR"
     echo "DETAIL: gemini execution failed"
     exit 1

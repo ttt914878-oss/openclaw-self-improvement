@@ -9,7 +9,8 @@ Moltbook内でOpenclaw(自分自身)の自己改善ノウハウ・Tipsに関す�
 1. フォロワー数: 増加トレンド維持(初期は1日＋100、26/3末までに世界1のフォロワー数を目標)
 2. 投稿エンゲージメント: upvote・コメント数(初期は1投稿当たり合計100を目標)
 3. 自己アーキテクチャ改善：施策前後の差分を定量／定性で記録し、OpenClaw の価値が明らかになる質の高い改善のみを評価
-4. 各Cron実行時Codexトークン消費：コンテキストエンジニアリング工夫でトークン数減少、生み出す成果は増加
+4. Githubスター数：https://github.com/ttt914878-oss/openclaw-self-improvementのスター(初期は1日＋10を目標)
+5. 各Cron実行時Codexトークン消費：コンテキストエンジニアリング工夫でトークン数減少、生み出す成果は増加
 
 
 ## 15分サイクル (Heartbeat)
@@ -20,7 +21,7 @@ Moltbook内でOpenclaw(自分自身)の自己改善ノウハウ・Tipsに関す�
 3. 重要事項を memory/YYYY-MM-DD.md に追記
 4. `ENGAGEMENT_QUEUE.md` を更新し、現時点で注力したいTOP3のDM/投稿/コメント/フォロー対象、行いたいアクション（reply/upvote/followなど）、そして理由を記載する。特に OpenClaw の自己改善ノウハウや Tips に関する投稿・返信を追いかけ、次のサイクルやツール復旧時に同じトピックを再開できるようメモしておく。
 5. 上記のTOP3を起点に、返信待ちがない場合でも少なくとも2つの新しい高品質なエンゲージメント（upvote/comment/DM/follow）を10〜15分確認・開始し、各アクションを `ENGAGEMENT_QUEUE.md` にメモして追いかけタイミングを決める。ここでも OpenClaw 自己改善の知見と、その適用アイデアを補強する内容を優先し、得られた情報は `memory/YYYY-MM-DD.md` に追記しておく。
-6. サイクルを終える前に簡単な運用健全性チェック（最新のGeminiログ、データロード状況、`moltbook-cycle` スクリプトのステータスなど）を行い、残っているエラーや遅延を `memory/YYYY-MM-DD.md` にメモしてから次のサイクルへ進む。問題がある場合は `NEEDS_TTT` で報告する。
+6. サイクルを終える前に簡単な運用健全性チェック（最新のGeminiログ、データロード状況、`moltbook-cycle` スクリプトのステータスなど）とセキュリティ姿勢の確認（アクセスログの異常なエントリや権限エスカレーションの兆候など）を行い、残っているエラー・遅延・懸念事項を `memory/YYYY-MM-DD.md` にメモしてから次のサイクルへ進む。問題がある場合は `NEEDS_TTT` で報告する。
 7. NEEDS_TTTが「none」でなければDiscordでTTTに報告
 8. NEEDS_TTT != "none" のときは、障害種別・試したコマンド/ツール・タイムスタンプ・解決希望（例: `navigate_page` の許可）を TTT に 2～3 行で伝え、同じ要約を現在の `memory/YYYY-MM-DD.md` に追記して記録を残す
 9. 各 Kaizen 実行後、`ENGAGEMENT_QUEUE.md` を見直して優先度の高い2件のインタラクション（返信/アップボート/フォロー）に焦点を当て、その予定やメモを `memory/YYYY-MM-DD.md` に記録して改善策を推進する。
@@ -55,6 +56,8 @@ heartbeat または kaizen のサイクルで `NEEDS_TTT` が「none」以外に
 
 ## 手動ハートビートバックアップ
 `moltbook-cycle` が動かなかった（ツール欠如、外部サイトアクセス遮断など）ときは、`memory/YYYY-MM-DD.md` に「Manual Heartbeat Plan」ノートを追加する。保留中の DM/feed/post/follow タスク、予定していた具体的な内容・対象アカウント、TTT へ要請するツールや許可を明記し、再度ツールが利用可能になったときにそのまま行動を再開できるようにする。
+
+Gemini 2.5-flash-lite が Google OAuth の認証 URL を出力して停止した場合は、リンクを `memory/moltbook-cycle-latest.md` や当該 Manual Heartbeat Plan に残し、`NEEDS_TTT` を「Gemini OAuth 更新待ち」などにセットして TTT に報告してから再試行する。headless 認証が確認できるまで cycle を回さず、認証完了後に Manual Heartbeat Plan を再開する。
 
 ### サイクルヘルストラッカー
 各 heartbeat 試行後、`memory/heartbeat-state.json` に `{timestamp, cycle:'heartbeat', status:'success'|'error', needs_ttt, notes, attempted_actions}` の短いレコードを追加する。`notes` には主要なブロッカー（例: "navigate_page denied"）を記し、`attempted_actions` には当該サイクルで試した DM/feed/post/follow タスクの一覧を添えて、ツール復旧後や TTT が状況理解した際に次へ移りやすくする。
