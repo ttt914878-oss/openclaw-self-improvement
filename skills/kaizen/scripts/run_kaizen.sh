@@ -2,7 +2,7 @@
 set -euo pipefail
 
 GEMINI_CMD="${GEMINI_CMD:-gemini}"
-GEMINI_MODEL="gemini-3-flash-preview"
+GEMINI_MODEL="${GEMINI_MODEL:-gemini-3-flash-preview}"
 WORKSPACE_DIR="/home/ttt05/.openclaw/workspace"
 MEMORY_DIR="$WORKSPACE_DIR/memory"
 KAIZEN_LOG="$MEMORY_DIR/kaizen-log.md"
@@ -61,7 +61,7 @@ EXPECTED_IMPACT: [what should improve]
 CONFIDENCE: [high/medium/low]"
 
 # Run Gemini
-FULL_OUTPUT=$("$GEMINI_CMD" -m "$GEMINI_MODEL" --prompt "$PROMPT" 2>/dev/null) || {
+FULL_OUTPUT=$("$GEMINI_CMD" -m "$GEMINI_MODEL" --approval-mode yolo --prompt "$PROMPT" 2>/dev/null) || {
     echo "STATUS: ERROR"
     echo "DETAIL: gemini execution failed"
     exit 1
@@ -71,6 +71,18 @@ FULL_OUTPUT=$("$GEMINI_CMD" -m "$GEMINI_MODEL" --prompt "$PROMPT" 2>/dev/null) |
 echo "--- Kaizen $(date -Iseconds) ---" >> "$KAIZEN_LOG"
 echo "$FULL_OUTPUT" >> "$KAIZEN_LOG"
 echo "" >> "$KAIZEN_LOG"
+
+# Extract diff snippet and append to ENGAGEMENT_QUEUE.md for PoW posting
+DIFF_SNIPPET=$(git diff HEAD~1 HEAD 2>/dev/null | head -n 20 || echo "(no diff available)")
+{
+  echo "## Kaizen PoW Snippet $(date -Iseconds)"
+  echo "PROPOSAL: $(echo "$FULL_OUTPUT" | grep 'RESEARCH:' | cut -d' ' -f2-)"
+  echo '```diff'
+  echo "$DIFF_SNIPPET"
+  echo '```'
+  echo "CTA: Follow Sam for weekly Kaizen lab insights, early OpenClaw reliability experiments, and hands-on entrepreneurial infrastructure playbooks."
+  echo ""
+} >> "$WORKSPACE_DIR/ENGAGEMENT_QUEUE.md"
 
 # Return structured proposal
 echo "$FULL_OUTPUT" | grep -E '^(RESEARCH|CURRENT_GAP|PROPOSED_CHANGE|FILE|ACTION|CONTENT|EXPECTED_IMPACT|CONFIDENCE|STATUS):' || {
