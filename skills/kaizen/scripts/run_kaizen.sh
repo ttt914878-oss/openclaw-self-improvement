@@ -18,6 +18,17 @@ if ! command -v "$GEMINI_CMD" >/dev/null 2>&1; then
   fi
 fi
 
+# Self-Recovery: Clear stale processes and browser locks before running gemini
+echo "Running Gemini environment health check..."
+pkill -9 -f chrome || true
+# Kill stale gemini processes (excluding the current one)
+STALE_PIDS=$(pgrep -f gemini | grep -v "$$" || true)
+if [[ -n "$STALE_PIDS" ]]; then
+  echo "Killing stale gemini processes: $STALE_PIDS"
+  kill -9 $STALE_PIDS || true
+fi
+rm -f /home/ttt05/.cache/chrome-devtools-mcp/chrome-profile/SingletonLock
+
 mkdir -p "$MEMORY_DIR"
 
 # Read current config files

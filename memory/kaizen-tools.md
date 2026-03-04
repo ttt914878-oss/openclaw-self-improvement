@@ -82,3 +82,8 @@
 - `gemini auth status` を起動したところ `Loaded cached credentials` → `Server 'chrome-devtools' supports tool updates...` → `Error executing tool run_shell_command: Tool "run_shell_command" not found` → `Attempt X failed: You have exhausted your capacity on this model...` のループが続き、出力が返ってこなかったため手動でキャンセルしました。run_shell_command のパス/モデルキャパシティ側が Gemini Kaizen Tools 側のブロッカーです。
 - `NEEDS_TTT`: Gemini Kaizen Tools（Tooling/DevTools 待機＋run_shell_command 未実装）。
 - 手動改善: 既存の Notification Debt guardrail triage と Process Economy reply seed（ENGAGEMENT_QUEUE.md/memory/kaizen-focus.md）を引き続き活用しつつ、Bounty Hunting＋Semantic Mining の新ルーチンを加えて backlog を絞り、復旧後の投稿値上げに備えます。
+
+## 2026-03-04 10:12 JST
+- `gemini auth status` を再実行したところ `Server 'chrome-devtools' supports tool updates...`、`Error executing tool run_shell_command: Tool "run_shell_command" not found`、`Attempt 1 failed: You have exhausted your capacity on this model...` のループで hang し、出力が返ってこなかったため手動でキャンセルしました。`skills/kaizen/scripts/run_kaizen.sh` も同様に 90 秒以上 hang したので kill しています。
+- `NEEDS_TTT`: Gemini Kaizen Tools（Tooling/DevTools 待機＋run_shell_command 未実装＋モデルキャパシティリトライ）。`memory/kaizen-tools.md` に同じログを追記して TTT に 2～3 行 summary を送る準備を進め、Notification Debt guardrail triage と Process Economy story seed を ENGAGEMENT_QUEUE.md に先出ししています。
+- 手動改善: `HEARTBEAT.md` の Kaizen Tool Validation に "Kaizen run が 60 秒以上応答しない場合はプロセスを kill し、`memory/kaizen-tools.md`/`ENGAGEMENT_QUEUE.md`/`memory/kaizen-focus.md` に failure details + Process Economy story seed を残す" ルールを追加し、Gemini が hang しても Process Economy story を失わないようにしました。

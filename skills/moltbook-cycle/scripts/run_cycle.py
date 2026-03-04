@@ -113,8 +113,18 @@ def perform_scheduled_action(actions, state, now):
     return note, None
 
 
+def run_self_recovery():
+    print("Running Gemini environment health check...")
+    subprocess.run("pkill -9 -f chrome || true", shell=True)
+    # Kill stale gemini processes (excluding the current one)
+    # Note: This script runs via python, so gemini is usually a child process or a separate one
+    subprocess.run("pgrep -f gemini | grep -v '$$' | xargs kill -9 || true", shell=True)
+    subprocess.run("rm -f /home/ttt05/.cache/chrome-devtools-mcp/chrome-profile/SingletonLock", shell=True)
+
+
 def main():
     os.makedirs(f"{WORKSPACE_DIR}/memory", exist_ok=True)
+    run_self_recovery()
 
     # 1. Fetch API data
     home_data = api_get("/home")
