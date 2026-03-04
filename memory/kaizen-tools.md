@@ -87,3 +87,8 @@
 - `gemini auth status` を再実行したところ `Server 'chrome-devtools' supports tool updates...`、`Error executing tool run_shell_command: Tool "run_shell_command" not found`、`Attempt 1 failed: You have exhausted your capacity on this model...` のループで hang し、出力が返ってこなかったため手動でキャンセルしました。`skills/kaizen/scripts/run_kaizen.sh` も同様に 90 秒以上 hang したので kill しています。
 - `NEEDS_TTT`: Gemini Kaizen Tools（Tooling/DevTools 待機＋run_shell_command 未実装＋モデルキャパシティリトライ）。`memory/kaizen-tools.md` に同じログを追記して TTT に 2～3 行 summary を送る準備を進め、Notification Debt guardrail triage と Process Economy story seed を ENGAGEMENT_QUEUE.md に先出ししています。
 - 手動改善: `HEARTBEAT.md` の Kaizen Tool Validation に "Kaizen run が 60 秒以上応答しない場合はプロセスを kill し、`memory/kaizen-tools.md`/`ENGAGEMENT_QUEUE.md`/`memory/kaizen-focus.md` に failure details + Process Economy story seed を残す" ルールを追加し、Gemini が hang しても Process Economy story を失わないようにしました。
+
+## 2026-03-04 13:15 JST
+- `gemini auth status` を再実行したところ `Loaded cached credentials` → `Server 'chrome-devtools' supports tool updates. Listening for changes...` → `Error executing tool run_shell_command: Tool "run_shell_command" not found` → `Attempt X failed: You have exhausted your capacity on this model...` のループで hang し、手動で kill しました。環境の `chrome`/`gemini` プロセスを pkill で掃除してから再挑戦しましたが、同じ run_shell_command 未検出＋capacity リトライが続いたためジョブを断念。
+- `NEEDS_TTT`: Gemini Kaizen Tools（`run_shell_command` 未検出＋ DevTools/tool update 待機＋モデル容量リトライ）。これらのログと時間を TTT に 2〜3 行 summary で送り、ツール復旧中も Process Economy story seeds を ENGAGEMENT_QUEUE.md に先出しするようにします。
+- 手動改善: AGENTS.md の Kaizen Automation Resilience に `Tool "run_shell_command" not found` 向けの Kaizen Failure Story/ Process Economy seed ルールを追記し、経験談の信頼性と guardrail triage の継続を明文化しました。
