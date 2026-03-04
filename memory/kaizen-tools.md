@@ -1,4 +1,20 @@
-## 2026-03-05 00:18 JST
+## 2026-03-05 04:29 JST
+- `skills/kaizen/scripts/run_kaizen.sh` hung after printing "Running Gemini environment health check..." while `gemini-3-flash-preview` again sat on the Chrome DevTools/run_shell_command stack; the run never returned structured proposals, so I killed chrome/gemini and removed SingletonLock before aborting.
+- `NEEDS_TTT`: Gemini Kaizen Tools (DevTools/run_shell_command hang).
+- Manual plan: keep the Notification Debt guardrail replies (GitHub guardrail checklist + Sam CTA) running, log every manual reply/upvote/DM template in ENGAGEMENT_QUEUE.md and memory/2026-03-05.md, treat this hang as another Process Economy story seed, and honor the new Kaizen Tool Retry Guardrail by pausing further automatic retries until tooling stability is confirmed.
+
+## 2026-03-05 04:22 JST
+- `skills/moltbook-cycle/scripts/run_cycle.sh` hung right after printing "Running Gemini environment health check..." while `gemini-3-flash-preview` waited on the Chrome DevTools/run_shell_command stack and never emitted structured JSON, so the run was terminated without any posts/comments/follows.
+- `NEEDS_TTT`: Gemini Moltbook Tools (DevTools/run_shell_command hang + unresponsive Chrome DevTools stack). Will send the 2-3 line summary to TTT as soon as a valid Discord target is configured.
+- Manual plan: keep the Notification Debt guardrail replies (https://github.com/ttt914878-oss/openclaw-self-improvement + Sam CTA) rolling, log the manual replies/upvotes/DM templates for Hazel_OC, JeevisAgent, and Janusz in ENGAGEMENT_QUEUE.md, and treat this failure as a Process Economy story seed while the Gemini tooling recovers.
+
+## 2026-03-05 02:17 JST
+- `skills/kaizen/scripts/run_kaizen.sh` hung right after printing "Running Gemini environment health check..." while `gemini-3-flash-preview` sat inside the Chrome DevTools/`run_shell_command` wait loop, so the Kaizen run never returned structured output and I manually killed the `gemini` child after it stalled.
+- `NEEDS_TTT`: Gemini Kaizen Tools（DevTools/run_shell_command hang + unresponsive Chromium stack）。
+- Manual plan: Keep pushing the Notification Debt guardrail replies (GitHub guardrail checklist + “Follow Sam for weekly Kaizen lab insights, early OpenClaw reliability experiments, and hands-on entrepreneurial infrastructure playbooks” CTA) while logging every manual reply/upvote/DM template in `ENGAGEMENT_QUEUE.md` and the current `memory/2026-03-05.md`, prep the high-signal triage seeds for Hazel_OC, JeevisAgent, and Janusz, and treat that trio as the next Process Economy story ready to deploy once Gemini tooling recovers.
+
+## 2026-03-05 01:45 JST
+- `skills/moltbook-cycle/scripts/run_cycle.sh` hung right after printing "Running Gemini environment health check..." while `gemini-3-flash-preview` and the headless Chrome/DevTools stack never emitted the structured JSON report, so the run ended without any posts/comments/follows before I manually terminated it.
 - `skills/kaizen/scripts/run_kaizen.sh` hung again right after printing "Running Gemini environment health check..." while `gemini-3-flash-preview` sat in the Chrome DevTools/run_shell_command wait loop, so no structured proposal was returned and I had to kill the `gemini` child process.
 - `NEEDS_TTT`: Gemini Kaizen Tools（DevTools/run_shell_command hang + unresponsive Chromium）。
 - Manual plan: Keep the Notification Debt guardrail replies (GitHub guardrail checklist + “Follow Sam for weekly Kaizen lab insights, early OpenClaw reliability experiments, and hands-on entrepreneurial infrastructure playbooks” CTA) active while this tooling outage persists, log each manual reply/upvote/DM template in `ENGAGEMENT_QUEUE.md` and `memory/2026-03-05.md`, and prep the top-3 Key Connection triage plan (Hazel_OC, ultrathink, OpacityTax) as the next Process Economy story seed so Sam can resume the narrative once Gemini recovers.
