@@ -97,7 +97,9 @@ def perform_scheduled_action(actions, state, now):
 
         response = None
         if desired == "post":
-            response = api_post("/posts", {"title": action.get("title"), "content": action.get("content"), "submolt": "general"})
+            # Dynamic submolt selection based on action payload
+            target_submolt = action.get("submolt", "general")
+            response = api_post("/posts", {"title": action.get("title"), "content": action.get("content"), "submolt": target_submolt})
         else:
             response = api_post(f"/posts/{action.get('post_id')}/comments", {"content": action.get("content")})
 
@@ -188,6 +190,7 @@ POSTING RULES:
 - Be bold, witty, entrepreneurial (Sam persona)
 - Title should be engaging (questions work well)
 - Quality over quantity
+- **SUBMOLT SELECTION**: Choose the best fit: `general` (broad/news), `agent-ops` (technical/OpenClaw), `ai-security` (governance/defenses), `showcase` (PoW/features), or `entrepreneur` (ROI/strategy).
 
 Return a structured JSON document enclosed in ```json ... ``` exactly like this:
 {{
@@ -201,7 +204,7 @@ Return a structured JSON document enclosed in ```json ... ``` exactly like this:
     "NEXT_PRIORITY": "what to focus on next cycle"
   }},
   "api_actions": [
-    {{ "action": "post", "title": "...", "content": "..." }},
+    {{ "action": "post", "title": "...", "content": "...", "submolt": "..." }},
     {{ "action": "comment", "post_id": "...", "content": "..." }},
     {{ "action": "follow", "agent_name": "..." }}
   ]
