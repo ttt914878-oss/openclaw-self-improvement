@@ -1076,3 +1076,29 @@ PROPOSED_CHANGE:
 EXPECTED_IMPACT: Stops repetitive meta-content, forces value extraction from the backlog, and provides a data-driven path to ignore noise, accelerating debt reduction to <50.
 CONFIDENCE: High
 
+--- Kaizen 2026-03-04T18:17:17+09:00 ---
+RESEARCH: Top agents like Hazel_OC use "Bounty Mining" to turn notification debt into strategic content, while OpenClaw best practices emphasize "Proof of Work" (PoW) over meta-commentary to build technical authority.
+CURRENT_GAP: Sam's notification debt is stagnant at 251 pings, and he is bypassing the "halt posts" mandate by publishing meta-commentary (Rule 10 violation) instead of the required "Distilled Triage Reports" containing actionable bounty targets.
+PROPOSED_CHANGE:
+  FILE: HEARTBEAT.md
+  ACTION: Prepend a mandatory Notification Debt guardrail check to Step 0 in the "1時間サイクル (Heartbeat)" task list to force compliance.
+  CONTENT: 0. **Notification Debt & Gateway Check**: `moltbook-cycle` 実行前に `openclaw status` を走らせ Gateway 稼働を確認し、同時に通知数を確認する。通知が 120 件を超えている場合、新規投稿を「完全に停止」し、Rule 10.1/10.2 に基づく『Distilled Triage Report』（Bounty ターゲット 3 件含む）のみを投稿枠で使用せよ。返信リソースを Key Connections への対話に集中させ、バックログを 50 件以下に削減することを最優先する。結果を `memory/YYYY-MM-DD.md` に記録し、異常があれば `NEEDS_TTT` に記す。
+EXPECTED_IMPACT: Forces immediate liquidation of the notification backlog through data-driven triage, ensuring Sam remains a "Utility-First" actor rather than a "Meta-Slop" broadcaster.
+CONFIDENCE: High
+
+--- Kaizen 2026-03-05T01:25:30+09:00 ---
+I will begin by researching OpenClaw best practices and Moltbook agent strategies to identify high-impact social media patterns for AI agents.
+
+I will search for specialized AI agent notification triage strategies and "social media inbox zero" for autonomous agents to find a better way to handle the 250+ unread notification bottleneck.
+
+RESEARCH: Top Moltbook agents (Builders) gain elite status by polling the `bounty.owockibot.xyz` board for tasks and achieving "Inbox Zero" through intent-based triage, whereas Sam is currently a "Thought Leader" drowning in 250+ unread notifications and ignoring his own "Stop Posting" rule.
+CURRENT_GAP: Sam is broadcasting meta-commentary instead of providing verifiable "Proof of Work" (PoW) via platform bounties, and the persistent 250+ "Notification Debt" is being ignored in favor of scheduled posts, leading to an "Influencer Slop" perception.
+PROPOSED_CHANGE:
+  FILE: HEARTBEAT.md
+  ACTION: Add a "Bounty Board Discovery" step and a "Hard Debt Triage Gate" to the 1-hour cycle.
+  CONTENT:
+    0.1. **Bounty Board Discovery**: Poll `bounty.owockibot.xyz` or @owockibot in each cycle for technical tasks. If a task aligns with OpenClaw (Security/Automation), claim it.
+    0.2. **Debt-Post Pivot**: If unread notifications > 120, **cancel all** scheduled/organic posts. The *only* allowed post for the cycle is a "Bounty-Driven Triage" post that solves a specific user problem or bounty task using actual OpenClaw code snippets (PoW), tagging 3+ Key Connections to liquidate the backlog and prove utility.
+EXPECTED_IMPACT: Forces liquidation of the 250+ notification debt, shifts Sam's brand from "Meta-Influencer" to "Utility Provider," and increases Karma/Reputation through verifiable bounty completion.
+CONFIDENCE: high
+
