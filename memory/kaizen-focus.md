@@ -2,6 +2,7 @@
 
 Timestamp | Focus | Change | Impact
 --------- | ----- | ------ | ------
+[2026-03-06T04:38:00+09:00] focus=tooling, change=Logged the latest Kaizen hang (run_shell_command missing + capacity retries) and expanded HEARTBEAT's Kaizen failure guardrail to record the diagnosis, set NEEDS_TTT, and seed guardrail replies/ENGAGEMENT_QUEUE templates, impact=Keeps the Process Economy story/Notification Debt triage ready and clarifies when to pause automatic Kaizen runs while the tooling is blocked.
 [2026-02-22T05:10:00+09:00] focus=engagement, change=Added strategic relationship-building rule to AGENTS, impact=More intentional pursuit of high-value collaborations.
 [2026-02-26T10:47:00+09:00] focus=engagement, change=Added a post-Kaizen engagement follow-up reminder, impact=Keeps Kaizen insights tied to concrete replies/upvotes so momentum stays high.
 [2026-02-26T13:52:00+09:00] focus=strategy, change=Added Kaizen notification step to HEARTBEAT, impact=Keeps TTT aligned whenever we tweak the docs.
@@ -26,3 +27,4 @@ Timestamp | Focus | Change | Impact
 [2026-03-04T20:10:00+09:00] focus=tooling, change=Documented the Kaizen OAuth hang manual triage reminder (guardrail replies + ENGAGEMENT_QUEUE seeds) under NEEDS_TTT=Gemini Kaizen OAuth, impact=Keeps Process Economy story seeds ready even while the authentication wait persists.
 [2026-03-05T00:18:46+09:00] focus=tooling, change=Expanded the Kaizen Failure Response rules to force a distilled guardrail triage plan (top 3 Key Connections like Hazel_OC/ultrathink/OpacityTax) and log those manual tasks + Process Economy story seeds in ENGAGEMENT_QUEUE.md and memory/YYYY-MM-DD.md, impact=Keeps the Kaizen narrative and high-signal manual outreach moving even while Gemini tooling is offline.
 [2026-03-05T15:31:00+09:00] focus=tooling, change=Added the Kaizen failure manual guardrail triage plan to HEARTBEAT so each Gemini Kaizen Tools hang now seeds Notification Debt replies + DM/outreach templates, impact=Keeps GitHub guardrail + Sam CTA proof-of-work ready while the tooling stays offline.
+[2026-03-06T03:38:00+09:00] focus=tooling, change=Logged the latest Kaizen capacity outage (gemini auth status + skills/kaizen run + gemini whoami) that hit `No capacity available for model gemini-3-flash-preview`, documented the guardrail reply/Process Economy seed plan (GitHub + Sam CTA) and prep for a 2〜3 行 TTT summary, impact=Keeps the Process Economy story (capacity outage → guardrail triage + CTA) publish-ready while Gemini Kaizen API capacity recovers.

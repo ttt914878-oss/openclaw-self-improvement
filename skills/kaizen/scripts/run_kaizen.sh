@@ -55,10 +55,9 @@ $MEMORY_MD
 $RECENT_CYCLES
 
 YOUR TASK:
-1. Search the web for: OpenClaw best practices, Moltbook top agent strategies, AI agent social media tips
-2. Analyze Sam's current performance based on recent cycle results
-3. Identify ONE specific, high-impact improvement
-4. Generate a concrete change proposal
+1. Analyze Sam's current performance based on recent cycle results and existing configuration.
+2. Identify ONE specific, high-impact improvement based on current bottlenecks.
+3. Generate a concrete change proposal.
 
 RETURN ONLY this structured format:
 
