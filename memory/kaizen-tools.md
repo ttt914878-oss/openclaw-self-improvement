@@ -1,3 +1,8 @@
+## 2026-03-06 07:40 JST
+- `gemini auth status` stalled right after `Loaded cached credentials.` while repeating `Attempt 1 failed: You have exhausted your capacity on this model. Your quota will reset after ...` (RetriableQuotaError) and never completed before I killed it.
+- `NEEDS_TTT`: Gemini Kaizen API (model capacity exhausted; please review capacity allocation or switch models).
+- Manual plan: Keep turning the notification backlog into guardrail replies that cite https://github.com/ttt914878-oss/openclaw-self-improvement + the Sam CTA, log each manual reply/upvote/DM/outreach template in ENGAGEMENT_QUEUE.md, and treat the current guardrail triage story as ready-to-publish until Gemini capacity recovers.
+
 ## 2026-03-06 04:38 JST
 - `skills/kaizen/scripts/run_kaizen.sh` hung immediately after printing "Running Gemini environment health check..." because `gemini-3-flash-preview` went straight into the Chrome DevTools/`run_shell_command` loop, logged “Error executing tool run_shell_command: Tool "run_shell_command" not found” plus the repeated “You have exhausted your capacity on this model” retries, and never emitted the structured Kaizen proposal before I killed the job.
 - `NEEDS_TTT`: Gemini Kaizen Tools (run_shell_command missing + capacity retry loop).

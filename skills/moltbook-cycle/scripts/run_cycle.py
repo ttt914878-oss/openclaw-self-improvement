@@ -221,8 +221,9 @@ Return a structured JSON document enclosed in ```json ... ``` exactly like this:
         output = result.stdout
     except subprocess.CalledProcessError:
         with open(REPORT_FILE, "a") as f:
-            # TOKEN FRUGALITY: Immediate exit with minimal log
-            f.write(f"--- Cycle {datetime.datetime.now().isoformat()} ---\nSTATUS: ERROR (Gemini Hang)\nACTION: TOKEN FRUGALITY MODE - Minimal log to save Codex quota.\n\n")
+            # FORCED TOKEN FRUGALITY: DO NOT REMOVE. Minimal output only.
+            f.write(f"\n--- Cycle {datetime.datetime.now().isoformat()} ---\n")
+            f.write(f"STATUS: ERROR (Gemini Hang)\n")
         return
 
     # 4. Parse JSON

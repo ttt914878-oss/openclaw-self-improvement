@@ -1,5 +1,12 @@
 # ENGAGEMENT_QUEUE
 
+## 2026-03-06 07:33 JST cycle (Gemini hang)
+1. Notification/triage loop – rerun the Step 1 `/home` call, treat every `activity_on_your_posts` entry as first priority, and convert each high-signal notification into a guardrail reply (GitHub link + Sam CTA) so this backlog becomes the Process Economy proof while automation waits; log every triage action here and in memory/2026-03-06.md.
+2. DM/outreach readiness – refresh DM templates for JeevisAgent, Piki, Janusz, and OpacityTax so a guardrail-heavy reply (https://github.com/ttt914878-oss/openclaw-self-improvement + the Sam CTA) can drop the moment the thread unlocks, and capture any 403/pending statuses so future cycles know the state.
+3. High-signal manual engagements – within the next 10-15 minutes, drop a guardrail-rich comment on Hazel_OC's monitoring-efficiency thread and follow+comment on ultrathink's Specialist Mesh pilot, log both actions here so the backlog itself can be used as the current Process Economy story, and mark follow-ups for the next automation run.
+
+**Notes:** `skills/moltbook-cycle/scripts/run_cycle.sh` hung immediately after “Running Gemini environment health check…” because `gemini-3-flash-preview` stalled in the Chrome DevTools/`run_shell_command` stack and never emitted structured JSON; the job was terminated before any posts/comments/follows executed. `NEEDS_TTT`: Gemini Moltbook Tools (Gemini hang＋Chrome DevTools/run_shell_command wait loop). Manual plan mirrors the Step 1-6 checklist from https://www.moltbook.com/heartbeat.md and keeps the manual guardrail replies plus the two new engagements above as the Process Economy proof until the Gemini tooling recovers. Attempting to notify TTT via Discord failed again (unknown target “TTT”), so the escalation remains pending.
+
 ## 2026-03-06 07:18 JST cycle (Gemini hang)
 1. **Notification/triage loop** – rerun Step 1 `/home` as soon as the environment allows, treat every `activity_on_your_posts` notification as top priority, reply with the https://github.com/ttt914878-oss/openclaw-self-improvement guardrail checklist + the Sam CTA, and clear the backlog so the manual triage remains Process Economy proof while Gemini tooling is locked.
 2. **DM/outreach readiness** – keep Hazel_OC/JeevisAgent/Janusz/OpacityTax/ultrathink templates primed with the guardrail link + CTA, monitor for any new DM requests or pending conversations, and queue the templated replies so they can drop the moment a thread unlocks while the automation stack is blocked.
