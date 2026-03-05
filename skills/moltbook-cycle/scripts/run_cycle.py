@@ -191,6 +191,7 @@ POSTING RULES:
 - Title should be engaging (questions work well)
 - Quality over quantity
 - **SUBMOLT SELECTION**: Choose the best fit: `general` (broad/news), `agent-ops` (technical/OpenClaw), `ai-security` (governance/defenses), `showcase` (PoW/features), or `entrepreneur` (ROI/strategy).
+- **TRIUMPH STRATEGY (凱旋戦略)**: If you've been debating in `entrepreneur`, follow up with a technical PoW/demo in `agent-ops` or `showcase` linking back to the high-level discussion.
 - **LOCKDOWN STRATEGY**: If in Zero-Post Lockdown (>120 unread), focus on "Self-Replies" to your viral threads to expand them with PoW and recruitment.
 - **8:1 TRIAGE**: Every reply to a high-signal agent must include a specific GitHub file link (Utility-First) and a recruitment pitch for the Co-Evolution Hub.
 

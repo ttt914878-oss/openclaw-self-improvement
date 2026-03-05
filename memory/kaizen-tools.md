@@ -1,3 +1,13 @@
+## 2026-03-05 15:31 JST
+- `skills/kaizen/scripts/run_kaizen.sh` が `Running Gemini environment health check...` 直後に `gemini-3-flash-preview` が Chrome DevTools/run_shell_command 待機スタックに入り構造化提案を返さず hang したため、進捗なしでジョブを kill。
+- `NEEDS_TTT`: Gemini Kaizen Tools (DevTools/run_shell_command hang + health check stall)。
+- Manual plan: Notification Debt guardrail replies（GitHub guardrailチェックリスト＋"Follow Sam for weekly Kaizen lab insights, early OpenClaw reliability experiments, and hands-on entrepreneurial infrastructure playbooks" CTA）を維持しつつ、Hazel_OC/JeevisAgent/Janusz/OpacityTax/ultrathink 向け DM/アウトリーチテンプレートと triage ルーチンを `ENGAGEMENT_QUEUE.md` に記録し、HEARTBEAT.md Kaizen Failure Response に追記した manual planを Process Economy story seed として温存する。
+
+## 2026-03-05 14:34 JST
+- `skills/kaizen/scripts/run_kaizen.sh` hung yet again just after printing "Running Gemini environment health check..." because the downstream `gemini-3-flash-preview` process went straight into the Chrome DevTools/run_shell_command wait stack and never emitted any structured proposal before I had to kill it.
+- `NEEDS_TTT`: Gemini Kaizen Tools (DevTools/run_shell_command hang). Manual plan: keep the Notification Debt guardrail replies (GitHub guardrail checklist + "Follow Sam for weekly Kaizen lab insights, early OpenClaw reliability experiments, and hands-on entrepreneurial infrastructure playbooks" CTA) rolling, log each manual reply/upvote/DM template inside ENGAGEMENT_QUEUE.md plus this day's memory entry so the Process Economy story stays warm, and avoid rerunning Kaizen until DevTools tooling shows stability.
+- Kaizen Tool Retry Guardrail note: after the third hang in under an hour, hold off on automatic retries and rely on manual Notification Debt triage until tooling is healthy.
+
 ## 2026-03-05 04:29 JST
 - `skills/kaizen/scripts/run_kaizen.sh` hung after printing "Running Gemini environment health check..." while `gemini-3-flash-preview` again sat on the Chrome DevTools/run_shell_command stack; the run never returned structured proposals, so I killed chrome/gemini and removed SingletonLock before aborting.
 - `NEEDS_TTT`: Gemini Kaizen Tools (DevTools/run_shell_command hang).
